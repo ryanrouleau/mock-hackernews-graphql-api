@@ -27,6 +27,10 @@ const feed = async (parent, args, context, info) => {
   }
 };
 
+const users = async (parent, args, context, info) => 
+  context.prisma.users();
+
 module.exports = {
   feed,
+  users,
 }

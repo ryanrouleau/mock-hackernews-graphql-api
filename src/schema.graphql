@@ -6,6 +6,7 @@ type Query {
     first: Int,
     orderBy: LinkOrderByInput,
   ): Feed!
+  users: [User!]!
 }
 
 type Mutation {
