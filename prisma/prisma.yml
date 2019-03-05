@@ -1,0 +1,12 @@
+#endpoint: ''
+endpoint: https://us1.prisma.sh/ryan-rouleau-476269/hackernews-node/dev
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ../src.generated/prisma-client
+
+hooks:
+  post-dploy:
+    - prisma generate
